@@ -1,0 +1,35 @@
+// 各个断点
+$breakpoints: (
+        'm' : (max-width: 1000px)
+);
+
+// 打断点的快捷写法
+@mixin res($name) {
+    // 循环断点Map，如果存在则返回
+    @if map-has-key($breakpoints, $name) {
+        @media #{inspect(map-get($breakpoints, $name))} {
+            @content;
+        }
+    }
+
+    @else {
+        @warn "没有这个断点哦 `#{$breakpoints}`。";
+    }
+}
+
+@function t($time) {
+    @return $time +s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin ts {
+    transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin bdr {
+    border: 1px solid #333;
+}
+
+
+.shadow {
+    display: none;
+}

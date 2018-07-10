@@ -1,0 +1,17 @@
+{
+  "name": "ux-simple-guide",
+  "version": "1.0.0",
+  "description": "A brief user-experience-guide",
+  "main": "src/main.js",
+  "scripts": {
+    "dev": "./node_modules/poi/bin/cli.js",
+    "build": "rm -rf ./dist && ./node_modules/poi/bin/cli.js build"
+  },
+  "author": "waynecz",
+  "license": "MIT",
+  "devDependencies": {
+    "poi": "^10.2.9",
+    "sass-loader": "^7.0.3",
+    "node-sass": "^4.9.0"
+  }
+}
